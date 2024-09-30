@@ -1,0 +1,37 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GustavoSantosDev</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <h1>GustavoSantosDev</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Sobre Mi</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <h2>Blog</h2>
+  <ul>
+    <% files.forEach(file => { %>
+      <li class="blog-post">
+        <a href="/post/<%= file.replace('.md', '') %>">
+          <span><%= file.replace('.md', '') %></span>
+        </a>
+      </li>
+    <% }) %>
+</ul> %>
+  </ul>
+</body>
+</html>
